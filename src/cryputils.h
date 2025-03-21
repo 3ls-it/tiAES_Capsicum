@@ -1,6 +1,6 @@
 /*-
  * cryputils.h
- * (c) 2023 2024 J Adams jfa63@duck.com
+ * (c) 2023 2024 J Adams jfa63[at]duck[dot]com
  * Released under the 2-clause BSD license.
  */
 

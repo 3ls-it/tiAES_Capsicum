@@ -1,11 +1,11 @@
 /*-
  * tiaes.c
- * (c) 2023 2024 J Adams jfa63@duck.com
+ * (c) 2023 2024 2025 J Adams jfa63[at]duck[dot]com
  * Released under the 2-clause BSD license.
  * Capsicum sandboxed version
  */
 
-/* Usage: tiaes [-e,-d] <infile> <outfile> */
+/* Usage: tiaes [-e,-d] <infile> <outfile> */   
 
 
 #include <readpassphrase.h>
