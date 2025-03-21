@@ -7,7 +7,6 @@
 
 /* Usage: tiaes [-e,-d] <infile> <outfile> */   
 
-
 #include <readpassphrase.h>
 #include <sys/stat.h>
 
