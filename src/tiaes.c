@@ -107,31 +107,31 @@ main(int argc, char* argv[])
         memset(key, 0, 32*sizeof(key[0]));
         free(key);
 
-		int rv = (ch = getopt(argc, argv, "ed:"));
-		if (rv != -1) {
-				switch (ch) {
-						case 'e':
-								cbcenc(dirfd, infn, outfn);
-								break;
-						case 'd':
-								cbcdec(dirfd, infn, outfn);
-								break;
-						case '?':
+        int rv = (ch = getopt(argc, argv, "ed:"));
+        if (rv != -1) {
+            switch (ch) {
+                case 'e':
+                    cbcenc(dirfd, infn, outfn);
+                    break;
+                case 'd':
+                    cbcdec(dirfd, infn, outfn);
+                    break;
+                case '?':
 
-						default:
-								memset(w, 0, 60*4*sizeof(w[0][0]));
-								printf("Incorrect args:\n Usage: tiaes [-e,-d] <infile> <outfile>\n");
-								return 0;
-				}
-		}
-		argc -= optind;
-		argv += optind;
+                default:
+                    memset(w, 0, 60*4*sizeof(w[0][0]));
+                    printf("Incorrect args:\n Usage: tiaes [-e,-d] <infile> <outfile>\n");
+                    return 0;
+            }
+        }
+        argc -= optind;
+        argv += optind;
 
         /* Clean up file permissions */
         if (fchmodat(dirfd, outfn, fmode, AT_RESOLVE_BENEATH) == -1) {
-                printf("chmod 0640 on %s failed.\n", outfn);
-                perror("");
-                return 1;
+            printf("chmod 0640 on %s failed.\n", outfn);
+            perror("");
+            return 1;
         }
 
         return 0;
